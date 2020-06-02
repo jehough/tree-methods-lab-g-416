@@ -4,6 +4,6 @@ function inOrder(currentNode){
   }
   console.log(currentNode)
   if(currentNode.right){
-    inOrder(currentNode.left)
+    inOrder(currentNode.right)
   }
 }
