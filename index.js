@@ -11,23 +11,20 @@ function inOrder(currentNode){
 
 function findOrAdd(rootNode, newNode){
   let currentNode = rootNode
-  console.log(currentNode)
   if(newNode.data < rootNode.data){
-    currentNode = rootNode.left
-    if (currentNode){
-      findOrAdd(currentNode, newNode)
+    if (currentNode.left){
+      findOrAdd(currentNode.left, newNode)
     }
     else{
-      currentNode = newNode
+      currentNode.left = newNode
     }
   }
   else if (newNode.data > rootNode.data) {
-    currentNode = rootNode.right
-    if (currentNode){
-      findOrAdd(currentNode, newNode)
+    if (currentNode.right){
+      findOrAdd(currentNode.right, newNode)
     }
     else{
-      currentNode = newNode
+      currentNode.right = newNode
     }
   }
   else {
