@@ -17,7 +17,7 @@ function findOrAdd(rootNode, newNode){
       findOrAdd(currentNode, newNode)
     }
     else{
-      currentNode = newNode
+      currentNode.left = newNode
     }
   }
   else if (newNode.data > rootNode.data) {
@@ -26,7 +26,7 @@ function findOrAdd(rootNode, newNode){
       findOrAdd(currentNode, newNode)
     }
     else{
-      currentNode = newNode
+      currentNode.right = newNode
     }
   }
   else {
