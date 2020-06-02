@@ -20,4 +20,16 @@ function findOrAdd(rootNode, newNode){
       currentNode = newNode
     }
   }
+  else if (newNode.data > rootNode.data) {
+    currentNode = rootNode.right
+    if (currentNode){
+      findOrAdd(currentNode, newNode)
+    }
+    else{
+      currentNode = newNode
+    }
+  }
+  else {
+    return true
+  }
 }
