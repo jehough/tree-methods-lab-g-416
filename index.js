@@ -32,4 +32,11 @@ function findOrAdd(rootNode, newNode){
   }
 }
 
-function max()
+function max(node){
+  if (node.right){
+    return max(node.right)
+  }
+  else {
+    return node
+  }
+}
