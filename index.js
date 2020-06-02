@@ -11,6 +11,7 @@ function inOrder(currentNode){
 
 function findOrAdd(rootNode, newNode){
   let currentNode = rootNode
+  console.log(currentNode)
   if(newNode.data < rootNode.data){
     currentNode = rootNode.left
     if (currentNode){
